@@ -1,0 +1,10 @@
+#timer {
+    font-size: 4rem; /* Adjusts the size of the timer text */
+    color: #333; /* Sets the timer text color */
+    font-weight: bold; /* Makes the timer text bold */
+    text-align: center; /* Centers the timer text horizontally */
+    margin-top: 50px; /* Adds space above the timer */
+    margin-bottom: 50px; /* Adds space below the timer */
+    letter-spacing: 2px; /* Increases spacing between characters */
+    font-family: 'Arial', sans-serif; /* Sets the font of the timer (you can change it to match your design) */
+}

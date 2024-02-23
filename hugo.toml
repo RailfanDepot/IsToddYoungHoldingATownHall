@@ -1,0 +1,4 @@
+baseURL = 'https://IsToddYoungHoldingATownHall.com'
+languageCode = 'en-us'
+title = 'Home'
+theme = 'mini'
