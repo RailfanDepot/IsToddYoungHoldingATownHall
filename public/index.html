@@ -14,7 +14,6 @@
 
 
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/custom.css">
 
 
 
@@ -59,6 +58,26 @@
     
 </header>
 
+
+<div id="timer" style="font-size: 48px; text-align: center; margin-top: 20px;"></div>
+<script>
+  
+  var countUpDate = new Date("Jan 1, 2024 00:00:00").getTime();
+
+  
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = now - countUpDate;
+
+    
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    
+    document.getElementById("timer").innerHTML = days + " days since event";
+
+  }, 1000);
+</script>
+<p>Your paragraph of text here. This paragraph serves as an introduction or additional information following the timer.</p>
 <div id="list-page">
     
     
