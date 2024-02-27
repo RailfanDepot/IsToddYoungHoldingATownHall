@@ -12,18 +12,25 @@
 
         <script>
             // Set the date we're counting up from
-            var countUpDate = new Date("Jan 1, 2020 00:00:00").getTime();
+            var countUpDate = new Date("Jan 1, 2020 00:00:00 EST").getTime();
 
             // Update the count every 1 second
             var x = setInterval(function() {
+                // Get today's date and time
                 var now = new Date().getTime();
-                var distance = now - countUpDate;
 
-                // Time calculations for days, hours, minutes and seconds
+                // Convert the current time to EST
+                var estTime = now - (new Date().getTimezoneOffset() * 60000) - (5 * 3600000); // EST is UTC-5
+
+                // Find the distance between now and the count up date
+                var distance = estTime - countUpDate;
+
+                // Time calculations for days and hours
                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
                 // Output the result in an element with id="timer"
-                document.getElementById("timer").innerHTML = days + " days since event";
+                document.getElementById("timer").innerHTML = days + " days " + hours + " hours since event";
 
             }, 1000);
         </script>
@@ -36,5 +43,4 @@
     </div>
 
     {{ partial "footer.html" . }}
-</body>
-</html>
+</body
